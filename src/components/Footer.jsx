@@ -193,7 +193,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            © {currentYear} Kelper. Todos los derechos reservados.
+            © {currentYear} Kepler. Todos los derechos reservados.
           </motion.p>
 
           <motion.div

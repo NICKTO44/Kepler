@@ -52,7 +52,7 @@ const Navbar = () => {
                 className="h-12 w-auto object-contain" 
               />
               <span className="text-2xl font-bold gradient-text">
-                Kelper
+                Kepler
               </span>
             </motion.a>
 

@@ -3,17 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaArrowDown } from 'react-icons/fa';
 import { whatsappNumber, whatsappMessage } from '../data/siteData';
 
+// ✅ CORRECCIÓN: Imports de imágenes para que funcionen en producción
+import home2 from '../assets/images/home2.webp';
+import imagen10 from '../assets/images/imagen10.webp';
+import imagen41 from '../assets/images/imagen41.webp';
+
 /**
  * Componente Hero con Carrusel de Imágenes de Fondo
  * ACTUALIZADO: 3 imágenes rotando automáticamente + filtro más claro
+ * OPTIMIZADO: Imports directos para funcionar en producción (GitHub Pages)
  */
 const Hero = () => {
-    // Array de imágenes WebP optimizadas para el carrusel
-    const backgroundImages = [
-        '/src/assets/images/home2.webp',
-        '/src/assets/images/imagen10.webp',
-        '/src/assets/images/imagen41.webp',
-    ];
+    // ✅ Array de imágenes usando imports (funciona en dev y producción)
+    const backgroundImages = [home2, imagen10, imagen41];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -23,7 +25,7 @@ const Hero = () => {
             setCurrentImageIndex((prevIndex) => 
                 (prevIndex + 1) % backgroundImages.length
             );
-        }, 5000); // Cambia cada 5 segundos
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
